@@ -8,6 +8,9 @@ import { ScreenHeaderBtn, NearbyJobCard } from '../../components'
 import { COLORS, icons, SIZES } from '../../constants'
 import styles from '../../styles/search'
 
+import { REACT_APP_RAPIDAPI_KEY } from '@env';
+
+const key = REACT_APP_RAPIDAPI_KEY
 
 const JobSearch = () => {
     const params = useSearchParams();
@@ -27,7 +30,7 @@ const JobSearch = () => {
                 method: "GET",
                 url: `https://jsearch.p.rapidapi.com/search`,
                 headers: {
-                    "X-RapidAPI-Key": '9bf839cd93msh946d49e4482ce0dp1757ddjsneadcce1ab1a4',
+                    "X-RapidAPI-Key": key,
                     "X-RapidAPI-Host": "jsearch.p.rapidapi.com",
                 },
                 params: {
